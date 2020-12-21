@@ -219,7 +219,7 @@ header table {
 
 #photos {
     width:100%;
-    columns:4;
+    columns:3;
     column-gap:4%;
     z-index:1;
     transition:0.4s ease-in-out;
