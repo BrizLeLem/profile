@@ -1,7 +1,7 @@
 var width = $(window).width();
 window.onscroll = function(){
 if ((width >= 1000)){
-    if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    if(document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
         $("#header").css("background","#fff");
         $("#header").css("color","#000");
         $("#header").css("box-shadow","0px 0px 20px rgba(0,0,0,0.09)");
