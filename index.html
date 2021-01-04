@@ -61,6 +61,7 @@
                     <a href="#projects">projects</a>
                     <a href="#photography">photography</a>
                     <a href="#contact">contact</a>
+
                 </td>
             </tr>
         </table>
@@ -70,7 +71,10 @@
             <td id="about" class="animated slideInLeft" style="animation-delay:2s;">
                 <h1>Hi, I am Briz.</h1>
                 <h1>I am a full-stack developer and photographer.</h1>
-                <button class="btn_one">Hire Me</button><br>
+                <a href="#contact-form">
+                <button class="btn_one">Hire Me</button>
+                </a><br>
+
                 <table>
                     <tr>
                         <td class="animated zoomIn" style="animation-delay:2.2s;"><a href="https://github.com/BrizLeLem/" target="blank" class="social"><i class="fab fa-github"></i></a></td>
@@ -200,24 +204,33 @@
                         </div>
                     </td>
                     <td>
-                        <form action=”mailto:briz.lelem@gmail.com”
-                              method=”POST”
-                              enctype=”multipart/form-data”
-                              name=”WebsiteContactForm”>
-                            <input type="text" placeholder="name" required>
-                            <input type="email" placeholder="email" required><br>
-                            <textarea placeholder="your message" required rows="5"></textarea><br>
-                            <button class="btn_one">send</button>
+                        <form action="https://formspree.io/f/mwkwwrbk"
+                              method="POST"
+                              id="contact-form">
+                            <input type="text" placeholder="name" name="name" required>
+                            <input type="email" placeholder="email" name="_replyto" required><br>
+                            <textarea placeholder="your message" name="message" required rows="5"></textarea><br>
+                            <button class="btn_one" type="submit">send</button>
                         </form>
                     </td>
                 </tr>
             </table>
     </div>
     <div id="footer">
+      <div class="footer-logo">
         <a class="navbar-brand" href="index.html">
-          <img src="images/LogoOctoGreenWhite11030.png" /></a> <a href="index.html"> brizlelem.</a>
+          <img src="images/LogoOctoGreenWhite11030.png" /></a>
+          <a href="index.html"> brizlelem.</a>
           <br>
           © copyright 2020
+        </div>
+          <div class="theme-switch-wrapper">
+            <em>dark mode:</em>
+              <label class="theme-switch" for="checkbox">
+                  <input type="checkbox" id="checkbox" />
+                  <div class="slider round"></div>
+            </label>
+          </div>
     </div>
     <script src="index.js" type="text/javascript"></script>
 </body>
