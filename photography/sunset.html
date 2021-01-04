@@ -93,19 +93,35 @@
                         </div>
                     </td>
                     <td>
-                        <form>
-                            <input type="text" placeholder="name" required>
-                            <input type="email" placeholder="email" required><br>
-                            <textarea placeholder="your message" required rows="5"></textarea><br>
-                            <button class="btn_one">send</button>
+                        <form action="https://formspree.io/f/mwkwwrbk"
+                              method="POST"
+                              id="contact-form">
+                            <input type="text" placeholder="name" name="name" required>
+                            <input type="email" placeholder="email" name="_replyto" required><br>
+                            <textarea placeholder="your message" name="message" required rows="5"></textarea><br>
+                            <button class="btn_one" type="submit">send</button>
                         </form>
                     </td>
                 </tr>
             </table>
     </div>
     <div id="footer">
-        made by <br> <a href="#">bll</a>
+      <div class="footer-logo">
+        <a class="navbar-brand" href="index.html">
+          <img src="../images/LogoOctoGreenWhite11030.png" /></a>
+          <a href="index.html"> brizlelem.</a>
+          <br>
+          © copyright 2020
+        </div>
+          <div class="theme-switch-wrapper">
+            <em>dark mode:</em>
+              <label class="theme-switch" for="checkbox">
+                  <input type="checkbox" id="checkbox" />
+                  <div class="slider round"></div>
+            </label>
+          </div>
     </div>
     <script src="photography.js" type="text/javascript"></script>
-</body>
+  </body>
 </html>
+
