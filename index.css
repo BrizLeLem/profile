@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
+/*Defining general theme*/
+
 :root {
   --text-color: #222;
   --bkg-color: #fff;
@@ -19,81 +21,6 @@
   --btn-bkg-hvr: #fff;
 }
 
-/*Simple css to style it like a toggle switch*/
-.theme-switch-wrapper {
-  display: flex;
-  align-items: center;
-  vertical-align: middle;
-  position: absolute;
-  bottom: 36%;
-  right: 2%;
-  color: var(--text-color);
-
-  em {
-    margin-left: 10px;
-    font-size: 1rem;
-  }
-}
-.footer-logo {
-  align-items: center;
-  margin-right: 18px;
-  vertical-align: middle;
-  width: 100%;
-  color: var(--text-color);
-}
-.theme-switch {
-  display: inline-block;
-  height: 34px;
-  position: relative;
-  width: 60px;
-  margin-left: 6px;
-}
-
-.theme-switch input {
-  display:none;
-}
-
-.slider {
-  background-color: #ccc;
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: .4s;
-}
-
-.slider:before {
-  background-color: #fff;
-  bottom: 4px;
-  content: "";
-  height: 26px;
-  left: 4px;
-  position: absolute;
-  transition: .4s;
-  width: 26px;
-}
-
-input:checked + .slider {
-  background-color: rgb(40, 114, 113);
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-
-
-
 * {
   font-family: 'Poppins', sans-serif;
 }
@@ -112,6 +39,24 @@ body {
     overflow-x:hidden;
     scroll-behavior: smooth;
 }
+
+/* Simple css to style it like a toggle switch */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  position: absolute;
+  bottom: 36%;
+  right: 2%;
+  color: var(--text-color);
+
+  em {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+}
+
+/* LOADING ANIMATION */
 
 #loading {
     width: 100vw;
@@ -137,6 +82,9 @@ body {
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
 }
+
+/*HEADER NAVBAR*/
+
 header {
     width:92vw;
     padding:6vh 4vw;
@@ -155,47 +103,15 @@ header table {
 }
 #logo {
     width:20%;
-}
-#navigation {
-    width:80%;
-}
-#magnify {
-    width:100vw;
-    height:100vh;
-    background:rgba(0, 0, 0, 0.92);
-    position:fixed;
-    z-index:4;
-    display:none;
-    flex-direction: column;
-    justify-content:center;
-}
-#magnify h1 {
-    position:absolute;
-    top:0;
-    right:0;
-    margin:20px 40px;
-    color:var(--text-color);
-    transition:0.4s ease-in-out;
-}
-#magnify h1:hover{
-    color:rgb(40, 114, 113);
-    cursor:pointer;
-}
-#img_here {
-    width:90%;
-    height:90%;
-    background-size:contain !important;
-    background-repeat:no-repeat !important;
-    margin:0px auto;
-}
-#logo {
     font-size:24px;
     color:rgb(40, 114, 113);
 }
 
 #navigation {
+    width:80%;
     text-align:right;
 }
+
 #navigation a {
     color:inherit;
     text-decoration:none;
@@ -208,6 +124,8 @@ header table {
     border-bottom:2px solid #fff;
 }
 
+/* TOP PART */
+
 #top_part {
     width:100%;
     border:2vh solid var(--bkg-color);
@@ -215,6 +133,8 @@ header table {
 #top_part tr td{
     width:50%;
 }
+
+/* ABOUT SECTION */
 #about {
     width:84% !important;
     height:95vh;
@@ -271,6 +191,8 @@ header table {
     color:var(--btn-color-hvr);
     background:var(--btn-bkg-hvr);
 }
+
+/* PICTURE ON THE RIGHT */
 #rightImage {
     width:100%;
     height:95vh;
@@ -278,6 +200,9 @@ header table {
     background-size:cover;
     background-repeat:no-repeat;
 }
+
+/* PROJECTS SECTION */
+
 #projects {
     width:92vw;
     padding:6vh 4vw;
@@ -346,6 +271,9 @@ header table {
   font-size: 18px;
   padding: 8px;
 }
+
+/* PHOTOGRAPHY SECTION */
+
 #photography {
     width:92vw;
     padding:6vh 4vw;
@@ -385,24 +313,8 @@ header table {
     cursor: pointer;
 }
 
+/* BIO SECTION */
 
-#photos {
-    width:100%;
-    columns:3;
-    column-gap:4%;
-    z-index:1;
-    transition:0.4s ease-in-out;
-}
-#photos img {
-    width:100%;
-    height:auto;
-    margin:4.5% 0px;
-    transition:0.4s ease-in-out;
-}
-#photos img:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
 #bio {
     width:92vw;
     padding:6vh 4vw;
@@ -413,6 +325,9 @@ header table {
     border-bottom:4px solid rgb(40, 114, 113);
     width:8%;
 }
+
+/* CONTACT SECTION */
+
 #contact {
     width:92vw;
     padding:6vh 4vw;
@@ -506,6 +421,9 @@ header table {
     top:-25px;
     left:30px;
 }
+
+/*FOOTER*/
+
 #footer {
     width:100%;
     padding:8vh 0px;
@@ -517,6 +435,65 @@ header table {
     color:rgb(40, 114, 113);
     text-decoration:none;
 }
+
+.footer-logo {
+  align-items: center;
+  margin-right: 18px;
+  vertical-align: middle;
+  width: 100%;
+  color: var(--text-color);
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+  margin-left: 6px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: rgb(40, 114, 113);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 ::placeholder {
     color:#000;
 }
